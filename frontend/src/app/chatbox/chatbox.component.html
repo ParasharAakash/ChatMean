@@ -1,0 +1,165 @@
+<div  class="container">
+		<div class="row no-gutters">
+		  <div id="list" class="col-md-4 border-right">
+			<div class="settings-tray">
+			  <img class="profile-image" src="https://clarity-enhanced.net/wp-content/themes/clarity-enhanced/assets/img/bootstrap-chat-app-assets/filip.jpg" alt="Profile img">
+			  <!-- <span class="settings-tray--right">
+				<i class="material-icons">cached</i>
+				<i class="material-icons">message</i>
+				<i class="material-icons">menu</i>
+			  </span> -->
+			</div>
+			<div class="search-box">
+			  <div class="input-wrapper">
+				<i class="material-icons">search</i>
+				<input id="searchh" placeholder="Search here" type="text">
+			  </div>
+			</div>
+			<div class="friend-drawer friend-drawer--onhover">
+			  <img class="profile-image" src="https://clarity-enhanced.net/wp-content/themes/clarity-enhanced/assets/img/bootstrap-chat-app-assets/robocop.jpg" alt="">
+			  <div class="text">
+				<h6>Aakash</h6>
+				<p class="msg">Message..</p>
+			  </div>
+			  <span class="time text-muted small">13:21</span>
+			</div>
+			<hr>
+			<div class="friend-drawer friend-drawer--onhover">
+			  <img class="profile-image" src="https://clarity-enhanced.net/wp-content/themes/clarity-enhanced/assets/img/bootstrap-chat-app-assets/optimus-prime.jpeg" alt="">
+			  <div class="text">
+				<h6>Aman</h6>
+				<p class="msg">Message..</p>
+			  </div>
+			  <span class="time text-muted small">00:32</span>
+			</div>
+			<hr>
+			<div class="friend-drawer friend-drawer--onhover ">
+			  <img class="profile-image" src="https://clarity-enhanced.net/wp-content/themes/clarity-enhanced/assets/img/bootstrap-chat-app-assets/real-terminator.png" alt="">
+			  <div class="text">
+				<h6>Sagar</h6>
+				<p class="msg">Message..</p>
+			  </div>
+			  <span class="time text-muted small">13:21</span>
+			</div>
+			<hr>
+			<div class="friend-drawer friend-drawer--onhover">
+			  <img class="profile-image" src="https://clarity-enhanced.net/wp-content/themes/clarity-enhanced/assets/img/bootstrap-chat-app-assets/termy.jpg" alt="">
+			  <div class="text">
+				<h6>Ravi</h6>
+				<p class="msg">Message..</p>
+			  </div>
+			  <span class="time text-muted small">13:21</span>
+			</div>
+			<hr>
+			<div class="friend-drawer friend-drawer--onhover">
+			  <img class="profile-image" src="https://clarity-enhanced.net/wp-content/themes/clarity-enhanced/assets/img/bootstrap-chat-app-assets/rick.jpg" alt="">
+			  <div class="text">
+				<h6>Deepak</h6>
+				<p class="msg">Message..</p>
+			  </div>
+			  <span class="time text-muted small">13:21</span>
+			</div>
+			<hr>
+			<div class="friend-drawer friend-drawer--onhover">
+			  <img class="profile-image" src="https://clarity-enhanced.net/wp-content/themes/clarity-enhanced/assets/img/bootstrap-chat-app-assets/rachel.jpeg" alt="">
+			  <div class="text">
+				<h6>XXXXX</h6>
+				<p class="msg">Message..</p>
+			  </div>
+			  <span class="time text-muted small">13:21</span>
+			</div>
+		  </div>
+	
+
+
+		  <div class="col-md-8">
+			<div class="settings-tray">
+				<div class="friend-drawer no-gutters ">
+				<img class="profile-image" src="ChatApp\src\assets\images\aakash photo.jpg" alt="">
+				<div class="text">
+				  <h6 id="Aak">Aakash</h6>
+				  <p class="msg">bio...</p>
+				</div>
+				<span class="settings-tray--right">
+				  <i class="material-icons">cached</i>
+				  <i class="material-icons">video_call</i>
+				  <i class="material-icons">menu</i>
+				</span>
+			  </div>
+			</div>
+			<div class="chat-panel ">
+				<div id="output" *ngFor="let data of output">
+					<p><strong>{{data.handle}} : </strong>{{data.message}}</p>
+				</div>
+				<div id="feedback"><p>{{feedback}}</p></div>
+				</div>
+			
+		<!-- </div> -->
+			  <div class="row">
+				<div class="col-12">
+				  <div class="chat-box-tray fixed-bottom">
+					<i style="cursor: pointer;" class="material-icons">sentiment_very_satisfied</i>
+					<input id="userName" type="text" [(ngModel)]="userName" placeholder="userName" >
+					<input id="text" type="text"  [(ngModel)]="message" (keypress)="messageTyping()" placeholder="Type your message here...">
+					<i style="cursor: pointer;" class="material-icons">mic</i>
+					<i (click)="sendMessage()" style="cursor: pointer;" class="material-icons">send</i>
+				  </div>
+				</div>
+			  </div>
+			</div>
+		  <!-- </div>
+		</div>
+	  </div> -->
+
+
+
+<!-- 
+	  <div class="row no-gutters">
+		<div class="col-md-3">
+		  <div class="chat-bubble chat-bubble--left">
+			<h6>Hello!</h6>
+		  </div>
+		</div>
+	  </div>
+	  <div class="row no-gutters">
+		<div class="col-md-3 offset-md-9">
+		  <div class="chat-bubble chat-bubble--right">
+			<h6>Hello!</h6>
+		  </div>
+		</div>
+	  </div>
+	  <div class="row no-gutters">
+		<div class="col-md-3 offset-md-9">
+		  <div class="chat-bubble chat-bubble--right">
+			<h6>Hello!</h6>
+		  </div>
+		</div>
+	  </div>
+	  <div class="row no-gutters">
+		<div class="col-md-3">
+		  <div class="chat-bubble chat-bubble--left">
+			<h6>Hello!</h6>
+		  </div>
+		</div>
+	  </div>
+	  <div class="row no-gutters">
+		<div class="col-md-3">
+		  <div class="chat-bubble chat-bubble--left">
+			<h6>Hello!</h6>
+		  </div>
+		</div>
+	  </div>
+	  <div class="row no-gutters">
+		<div class="col-md-3">
+		  <div class="chat-bubble chat-bubble--left">
+			<h6>Hello!</h6>
+		  </div>
+		</div>
+	  </div>
+	  <div class="row no-gutters">
+		<div class="col-md-3 offset-md-9">
+		  <div class="chat-bubble chat-bubble--right">
+			<h6>Hello!</h6>
+		  </div>
+		</div>
+	  </div> -->

@@ -1,0 +1,70 @@
+<div class="admin">
+
+    <div class="new-entry">
+        <i><h3>Add New Users</h3></i>
+    <hr>
+        <form class="container" [formGroup]="myForm">
+                <div class="form-group">
+                    <h5><label> Full Name</label></h5>
+                    <input type="text" formControlName="fullname" class="form-control" id="name"  placeholder="Enter Name">
+                    <span class="text-danger" *ngIf="isValid('fullname')" >Full Name is Required</span>  
+                  </div>
+                <div class="form-group">
+                  <h5><label>Mobile Number</label></h5>
+                  <input type="text" formControlName="mobile" class="form-control" id="mnumber"  placeholder="Enter Number">
+                </div>
+                <div class="form-group">
+                  <h5><label>Email address</label></h5>
+                  <input type="email" formControlName="email" class="form-control" id="email"  placeholder="Enter email">
+                  <span class="text-danger" *ngIf="isValid('email')"  >Valid E-Mail is Required</span> 
+                </div>
+                <div class="form-group">
+                  <h5><label>Password</label></h5>
+                  <input type="password" formControlName="password" class="form-control" placeholder="Password">
+                  <span class="text-danger" *ngIf="isValid('password')"  >Password is Required</span> 
+                </div>
+                <button type="submit" (click)="register()" class="btn btn-primary ">Submit</button>
+              <div>{{successMessage}}</div>
+            </form>
+    </div>
+        
+    
+    <div class="List">
+        <i><h3> List of Added Users</h3></i>
+        <hr>
+
+        <table id="myTable" class="table table-striped ">
+            <thead>
+              <tr>
+                <th scope="col"></th>
+                <th scope="col">Name</th>
+                <th scope="col">Mobile no.</th>
+                <th scope="col">E-Mail</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>Aakash Parashar</td>
+                <td>9818918929</td>
+                <td>aa@mdo</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Aman</td>
+                <td>82397292</td>
+                <td>am@fat</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>Sagar</td>
+                <td>9897298211</td>
+                <td>rv@twitter</td>
+              </tr>
+            </tbody>
+          </table>
+          
+    </div>
+    
+
+</div>
