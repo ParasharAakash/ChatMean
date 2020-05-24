@@ -29,20 +29,20 @@ export class HomeComponent implements OnInit {
   }
   ulogin(){
     console.log(this.myLogin.value);
-    sessionStorage.setItem('ulemail', this.myForm.value.email);
-    sessionStorage.setItem('ulpassword', this.myForm.value.password);
+    sessionStorage.setItem('ulemail', this.myLogin.value.ulemail);
+    sessionStorage.setItem('ulpassword', this.myLogin.value.ulpassword);
     if(sessionStorage.getItem('ulemail')===localStorage.getItem('uemail')  && sessionStorage.getItem('ulpassword')===localStorage.getItem('upassword')){
       console.log("Login Success");
       this._router.navigate(['/chatbox'] );
     }
     else{
-      console.log("Not an Admin");
+      console.log("Not a user");
     }
     console.log(sessionStorage);
   
   }
   alogin() {
-    console.log(this.myForm.value);
+    // console.log(this.myForm.value);
     sessionStorage.setItem('email', this.myForm.value.email);
     sessionStorage.setItem('password', this.myForm.value.password);
     if(sessionStorage.getItem('email')==='aakash@123'  && sessionStorage.getItem('password')==='vinove'){
